@@ -10,6 +10,7 @@ namespace MVVM_Lib
 		{
 		  DB = newDB;
 			Patients = DB.Patients.ToList();
+			Examinations = DB.Examinations.ToList();
 			return this;
 		}
 		private List<Patient> patients;
@@ -31,6 +32,17 @@ namespace MVVM_Lib
             RaisePropertyCHangedEvent(nameof(selectedPatient));
             }
 		}
+
+		private List<Examination> examinations;
+
+		public List<Examination> Examinations
+		{
+			get { return examinations; }
+			set { examinations = value;
+				RaisePropertyCHangedEvent(nameof(examinations));
+			}
+		}
+
 
 
 	}

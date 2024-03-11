@@ -21,5 +21,6 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <DataGrid Grid.Row="0" Grid.Column="0" ItemsSource="{Binding Patients}"></DataGrid>
+        <DataGrid Grid.Row="0" Grid.Column="2" ItemsSource="{Binding Examinations}"/>
     </Grid>
 </Window>
