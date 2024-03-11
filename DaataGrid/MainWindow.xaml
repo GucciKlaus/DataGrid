@@ -22,5 +22,13 @@
         </Grid.ColumnDefinitions>
         <DataGrid Grid.Row="0" Grid.Column="0" ItemsSource="{Binding Patients}"></DataGrid>
         <DataGrid Grid.Row="0" Grid.Column="2" ItemsSource="{Binding Examinations}"/>
+        <DataGrid Grid.Row="0" Grid.Column="1" ItemsSource="{Binding VMDoctors}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Familienname" Binding="{Binding Lastname}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Vorname" Binding="{Binding Firstname}"></DataGridTextColumn>
+                <DataGridCheckBoxColumn Header="GPT" Binding="{Binding GPTDoctor}"></DataGridCheckBoxColumn>
+                <DataGridHyperlinkColumn Header="Homepage" Binding="{Binding DoctorLink}"></DataGridHyperlinkColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
