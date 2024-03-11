@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataLayerLib
 {
-    internal class HospitalDBContext :DbContext
+    public class HospitalDBContext :DbContext
     {
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Doctor> Doctors { get; set; }
